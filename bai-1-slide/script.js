@@ -213,6 +213,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Support swipe gestures on mobile
+    let touchstartX = 0;
+    let touchendX = 0;
+    const slidesContainer = document.querySelector('.slides-container');
+
+    if (slidesContainer) {
+        slidesContainer.addEventListener('touchstart', (e) => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        slidesContainer.addEventListener('touchend', (e) => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 55; // Khoảng cách vuốt tối thiểu (px)
+        if (touchendX < touchstartX - swipeThreshold) {
+            nextSlide(); // Vuốt sang trái -> Trang tiếp theo
+        }
+        if (touchendX > touchstartX + swipeThreshold) {
+            prevSlide(); // Vuốt sang phải -> Trang trước đó
+        }
+    }
+
     // Khởi tạo trạng thái ban đầu
     updateSlide();
 });
