@@ -918,3 +918,234 @@ body {
     font-size: 0.9rem;
 }
 
+/* --- Tối ưu hóa hiển thị đa thiết bị (Responsive Design) --- */
+
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto !important;
+        align-items: flex-start !important;
+        padding: 0 !important;
+        background-color: var(--bg-light); /* Bỏ viền tối bên ngoài trên tablet */
+    }
+
+    .presentation-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        aspect-ratio: auto !important; /* Loại bỏ tỷ lệ 16:9 cố định */
+    }
+
+    .slide {
+        padding: 24px 20px !important;
+    }
+
+    .slide-body {
+        overflow-y: auto !important;
+    }
+
+    .presentation-controls {
+        padding: 0 20px !important;
+    }
+
+    .progress-bar-container {
+        margin: 0 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Điều chỉnh các lưới (Grids) */
+    .grid-2, .grid-2-large, .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .vocab-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-top: 10px !important;
+    }
+
+    .phonetic-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .phonetic-grid.finals {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .numbers-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    /* Thu hẹp các card phức tạp */
+    .custom-vocab-card {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: 10px !important;
+        padding: 15px !important;
+    }
+
+    .custom-vocab-card .vocab-badge-zh {
+        font-size: 1.4rem !important;
+    }
+
+    .custom-vocab-card .vocab-badge-pinyin {
+        font-size: 1rem !important;
+    }
+
+    /* Tối ưu kích cỡ chữ (Typography) */
+    .main-title {
+        font-size: 2rem !important;
+        margin-top: 15px !important;
+    }
+
+    .subtitle {
+        font-size: 1.1rem !important;
+        margin-top: 8px !important;
+    }
+
+    .slide-header {
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .slide-header h2 {
+        font-size: 1.15rem !important;
+    }
+
+    .slide-num {
+        font-size: 0.8rem !important;
+        padding: 2px 8px !important;
+    }
+
+    .lead-text {
+        font-size: 0.9rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .vocab-item {
+        min-height: 100px !important;
+        padding: 12px 8px !important;
+        border-radius: 8px !important;
+    }
+
+    .zh-char {
+        font-size: 1.4rem !important;
+    }
+
+    .pinyin {
+        font-size: 0.9rem !important;
+        margin-top: 6px !important;
+    }
+
+    .meaning {
+        font-size: 0.8rem !important;
+        margin-top: 4px !important;
+    }
+
+    /* Bong bóng hội thoại */
+    .dialog-container {
+        gap: 15px !important;
+    }
+
+    .dialog-block {
+        padding: 12px !important;
+    }
+
+    .dialog-row {
+        margin-bottom: 8px !important;
+    }
+
+    .speaker {
+        width: 55px !important;
+        font-size: 0.85rem !important;
+        margin-top: 6px !important;
+    }
+
+    .dialog-bubble {
+        padding: 8px 12px !important;
+        border-radius: 10px !important;
+    }
+
+    .dialog-bubble .zh {
+        font-size: 1.1rem !important;
+    }
+
+    .dialog-bubble .py {
+        font-size: 0.85rem !important;
+    }
+
+    .dialog-bubble .vi {
+        font-size: 0.75rem !important;
+    }
+
+    /* Luyện tập & Đóng vai */
+    .rule-card, .exercise-card, .scenario-card, .info-card, .target-card {
+        padding: 15px !important;
+    }
+
+    .rule-card h3, .exercise-card h3, .scenario-card h4, .info-card h3, .target-card h3 {
+        font-size: 1rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .formula-box {
+        padding: 8px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .formula {
+        font-size: 0.95rem !important;
+    }
+
+    .rule-explain {
+        font-size: 0.8rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .example-box {
+        padding: 10px !important;
+    }
+
+    .ex-new {
+        font-size: 0.95rem !important;
+    }
+
+    .ex-old {
+        font-size: 0.85rem !important;
+    }
+
+    .arrow {
+        margin: 0 8px !important;
+    }
+
+    /* Nút bấm điều hướng chân trang */
+    .presentation-controls {
+        height: 50px !important;
+        padding: 0 10px !important;
+    }
+
+    .nav-btn {
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+        border-radius: 6px !important;
+        gap: 4px !important;
+    }
+
+    .progress-bar-container {
+        margin: 0 10px !important;
+    }
+}
+
+
