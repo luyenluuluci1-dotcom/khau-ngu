@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Số đếm, Số thứ tự & Tiền tệ - Giáo án Tiếng Trung Giao Tiếp (Trần Văn Thảo)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Plus Jakarta Sans cho tiêu đề và Inter cho nội dung -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Vùng chứa Slide -->
+        <div class="slides-container">
+            
+            <!-- Slide 1: Bìa -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content cover-slide">
+                    <div class="cover-header">
+                        <span class="tag">汉语口语速成 • 实用数字篇</span>
+                    </div>
+                    <div class="cover-body">
+                        <h1 class="main-title">第 3 课：数字、序号 & 货币单位</h1>
+                        <p class="subtitle">Bài 3: Số đếm, Số thứ tự & Đơn vị tiền tệ</p>
+                        <div class="divider"></div>
+                        <p class="author">Giáo án tùy chỉnh dành riêng cho: <strong>Trần Văn Thảo (陈文草)</strong></p>
+                        <p class="destination">Mục tiêu: Độc lập giao dịch, nhận phòng & đi tàu điện ngầm tại <strong>Trùng Khánh (重庆)</strong></p>
+                    </div>
+                    <div class="cover-footer">
+                        <p class="hint">Sử dụng phím mũi tên <span class="key">←</span> <span class="key">→</span> hoặc click chuột để chuyển trang</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Mục tiêu bài học -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Mục tiêu thực tế của Bài 3</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body grid-2">
+                        <div class="info-card">
+                            <h3>Ngữ cảnh ứng dụng</h3>
+                            <div class="avatar-placeholder">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 7H15M9 11H15M9 15H13M19 21V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V21L12 18L19 21Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <p class="dest-desc" style="font-size: 1.05rem; text-align: left;">
+                                Trùng Khánh là thành phố 3D khổng lồ. Việc nắm chắc số đếm và số thứ tự giúp anh Thảo tự xoay sở các việc:
+                                <br><br>
+                                • Tìm đúng số phòng, số tầng khách sạn.
+                                <br>
+                                • Đi đúng line tàu điện ngầm và cổng ra (Exit).
+                                <br>
+                                • Tự tin đọc và kiểm tra giá tiền khi mua sắm, ăn lẩu.
+                            </p>
+                        </div>
+                        <div class="target-card">
+                            <h3>Kỹ năng cần đạt</h3>
+                            <ul style="text-align: left; line-height: 1.8; color: var(--text-dark); padding-left: 20px;">
+                                <li>Phát âm chuẩn từ 0 đến 9999.</li>
+                                <li>Phân biệt rõ cách dùng <strong>二 (èr)</strong> và <strong>两 (liǎng)</strong>.</li>
+                                <li>Đọc trôi chảy mã số phòng, tầng nhà, tuyến tàu điện.</li>
+                                <li>Nghe hiểu giá tiền và nói giá tiền bằng tiếng Trung (văn nói giao tiếp hàng ngày).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Số đếm cơ bản 0 - 10 -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Số đếm cơ bản từ 0 đến 10 (数字 0 - 10)</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body">
+                        <p class="lead-text">Bấm vào các ô số dưới đây để nghe phát âm mẫu chuẩn (zh-CN):</p>
+                        <div class="number-grid">
+                            <div class="number-item" data-pronounce="零">
+                                <span class="num-arabic">0</span>
+                                <span class="num-zh">零</span>
+                                <span class="num-py">líng</span>
+                                <span class="num-vi">Linh</span>
+                            </div>
+                            <div class="number-item" data-pronounce="一">
+                                <span class="num-arabic">1</span>
+                                <span class="num-zh">一</span>
+                                <span class="num-py">yī</span>
+                                <span class="num-vi">Nhất</span>
+                            </div>
+                            <div class="number-item" data-pronounce="二">
+                                <span class="num-arabic">2</span>
+                                <span class="num-zh">二</span>
+                                <span class="num-py">èr</span>
+                                <span class="num-vi">Nhị</span>
+                            </div>
+                            <div class="number-item" data-pronounce="三">
+                                <span class="num-arabic">3</span>
+                                <span class="num-zh">三</span>
+                                <span class="num-py">sān</span>
+                                <span class="num-vi">Tam</span>
+                            </div>
+                            <div class="number-item" data-pronounce="四">
+                                <span class="num-arabic">4</span>
+                                <span class="num-zh">四</span>
+                                <span class="num-py">sì</span>
+                                <span class="num-vi">Tứ</span>
+                            </div>
+                            <div class="number-item" data-pronounce="五">
+                                <span class="num-arabic">5</span>
+                                <span class="num-zh">五</span>
+                                <span class="num-py">wǔ</span>
+                                <span class="num-vi">Ngũ</span>
+                            </div>
+                            <div class="number-item" data-pronounce="六">
+                                <span class="num-arabic">6</span>
+                                <span class="num-zh">六</span>
+                                <span class="num-py">liù</span>
+                                <span class="num-vi">Lục</span>
+                            </div>
+                            <div class="number-item" data-pronounce="七">
+                                <span class="num-arabic">7</span>
+                                <span class="num-zh">七</span>
+                                <span class="num-py">qī</span>
+                                <span class="num-vi">Thất</span>
+                            </div>
+                            <div class="number-item" data-pronounce="八">
+                                <span class="num-arabic">8</span>
+                                <span class="num-zh">八</span>
+                                <span class="num-py">bā</span>
+                                <span class="num-vi">Bát</span>
+                            </div>
+                            <div class="number-item" data-pronounce="九">
+                                <span class="num-arabic">9</span>
+                                <span class="num-zh">九</span>
+                                <span class="num-py">jiǔ</span>
+                                <span class="num-vi">Cửu</span>
+                            </div>
+                            <div class="number-item" data-pronounce="十">
+                                <span class="num-arabic">10</span>
+                                <span class="num-zh">十</span>
+                                <span class="num-py">shí</span>
+                                <span class="num-vi">Thập</span>
+                            </div>
+                            <div class="number-item" style="background-color: var(--primary-light); border-color: var(--accent-color);" data-pronounce="两">
+                                <span class="num-arabic">2 (Lượng)</span>
+                                <span class="num-zh">两</span>
+                                <span class="num-py">liǎng</span>
+                                <span class="num-vi">Lượng</span>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <p>⚠️ <strong>Mẹo phát âm số 4 và số 10:</strong> Tránh nhầm lẫn giữa <strong>四 (sì - xì)</strong> và <strong>十 (shí - sứ)</strong>. Phát âm sai thanh điệu hoặc khẩu hình sẽ dễ dẫn đến nhầm lẫn tai hại trong giao dịch tiền bạc!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Quy tắc ghép số đến 9999 & Cách dùng 两 -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Quy tắc ghép số lớn & Phân biệt 二 vs 两</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body grid-2">
+                        <div class="rule-card">
+                            <h3>1. Ghép số hàng chục, trăm, nghìn</h3>
+                            <p class="rule-explain">Quy tắc ghép rất tương đồng với tiếng Việt:</p>
+                            <ul style="padding-left: 20px; line-height: 1.8; font-size: 0.95rem; color: var(--text-dark);">
+                                <li class="playable" data-pronounce="十一">11 = 十一 <span class="pinyin-text">[shíyī]</span> (Mười một)</li>
+                                <li class="playable" data-pronounce="二十">20 = 二十 <span class="pinyin-text">[èrshí]</span> (Hai mươi)</li>
+                                <li class="playable" data-pronounce="三十五">35 = 三十五 <span class="pinyin-text">[sānshíwǔ]</span> (Ba mươi lăm)</li>
+                                <li class="playable" data-pronounce="一百">100 = 一百 <span class="pinyin-text">[yìbǎi]</span> (Một trăm)</li>
+                                <li class="playable" data-pronounce="一千">1000 = 一千 <span class="pinyin-text">[yìqiān]</span> (Một nghìn)</li>
+                            </ul>
+                        </div>
+                        <div class="rule-card">
+                            <h3>2. Điểm đặc biệt: 二 (èr) vs 两 (liǎng)</h3>
+                            <div class="formula-box">
+                                <span class="formula">二 = Đếm số, số thứ tự / 两 = Số lượng + Lượng từ</span>
+                            </div>
+                            <p class="rule-explain">Dùng <strong>两 [liǎng]</strong> khi nói về số lượng của sự vật (cần đi kèm lượng từ) hoặc khi gọi món trà sữa/món ăn:</p>
+                            <div class="example-box" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+                                <div class="playable" data-pronounce="两个">两个 <span class="pinyin-text">[liǎng gè]</span>: Hai cái/quả (Không dùng 二个)</div>
+                                <div class="playable" data-pronounce="两杯奶茶">两杯奶茶 <span class="pinyin-text">[liǎng bēi nǎichá]</span>: Hai ly trà sữa</div>
+                                <div class="playable" data-pronounce=" hai người">两人 <span class="pinyin-text">[liǎng rén]</span>: Hai người</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Số thứ tự & Định danh khách sạn, tàu điện -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Số thứ tự & Định danh thực tế đi lại</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body">
+                        <p class="lead-text">Cách sử dụng số thứ tự, số phòng, số tầng khách sạn và ga tàu điện ngầm ở Trùng Khánh:</p>
+                        
+                        <!-- Số thứ tự cơ bản -->
+                        <div class="ordinal-row" style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <div class="playable" data-pronounce="第一" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; cursor: pointer; transition: all 0.2s;">
+                                <strong>Thứ nhất:</strong> <span class="hl">第一 [dì-yī]</span>
+                            </div>
+                            <div class="playable" data-pronounce="第二" style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 10px; cursor: pointer; transition: all 0.2s;">
+                                <strong>Thứ hai:</strong> <span class="hl">第二 [dì-er]</span>
+                            </div>
+                        </div>
+
+                        <div class="grid-2">
+                            <div class="exercise-card">
+                                <h3 class="hl">🏢 Khách sạn (酒店 - Jiǔdiàn)</h3>
+                                <ul class="drill-list">
+                                    <li class="playable" data-pronounce="十二楼">
+                                        <strong>Tầng 12:</strong>
+                                        <span class="hl">十二楼 [shí-èr lóu]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="十五楼">
+                                        <strong>Tầng 15:</strong>
+                                        <span class="hl">十五楼 [shíwǔ lóu]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="一五零二室">
+                                        <strong>Phòng 1502:</strong>
+                                        <span class="hl">一五零二室 [yī wǔ líng èr shì]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="八零八室">
+                                        <strong>Phòng 808:</strong>
+                                        <span class="hl">八零八室 [bā líng bā shì]</span>
+                                    </li>
+                                </ul>
+                                <p class="note-text" style="margin-top: 10px;">💡 *Mẹo:* Khi đọc số phòng khách sạn, chữ số <strong>1 (yī)</strong> thường đọc là <strong>yī</strong> hoặc đọc chệch thành <strong>yāo</strong> để tránh nhầm với 7 (qī).</p>
+                            </div>
+                            <div class="exercise-card">
+                                <h3 class="hl">🚇 Tàu điện ngầm (地铁 - Dìtiě)</h3>
+                                <ul class="drill-list">
+                                    <li class="playable" data-pronounce="二号线">
+                                        <strong>Tuyến số 2 (Line 2):</strong>
+                                        <span class="hl">二号线 [èr hào xiàn]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="三号线">
+                                        <strong>Tuyến số 3 (Line 3):</strong>
+                                        <span class="hl">三号线 [sān hào xiàn]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="B口">
+                                        <strong>Lối ra B:</strong>
+                                        <span class="hl">B口 [B kǒu]</span>
+                                    </li>
+                                    <li class="playable" data-pronounce="C口">
+                                        <strong>Lối ra C:</strong>
+                                        <span class="hl">C口 [C kǒu]</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Đơn vị tiền tệ (Văn viết vs Văn nói) -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Đơn vị tiền tệ Trung Quốc (Nhân dân tệ - RMB)</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body grid-2">
+                        <div class="rule-card">
+                            <h3>1. Văn viết (Trên bảng giá / App)</h3>
+                            <p class="rule-explain">Mắt bạn sẽ nhìn thấy các ký hiệu trên nhãn mác hoặc màn hình thanh toán:</p>
+                            <ul style="padding-left: 20px; line-height: 2; font-size: 1rem; color: var(--text-dark);">
+                                <li><strong>元 [Yuán]</strong>: Đồng / Tệ (Ký hiệu: ¥)</li>
+                                <li><strong>角 [Jiǎo]</strong>: Hào (Bằng 1/10 nguyên)</li>
+                                <li><strong>分 [Fēn]</strong>: Xu (Ít dùng thực tế hiện nay)</li>
+                            </ul>
+                        </div>
+                        <div class="rule-card" style="border-color: var(--primary-color); background-color: var(--primary-light);">
+                            <h3 style="color: var(--primary-dark)">2. Văn nói (Khi giao tiếp / Mua bán)</h3>
+                            <p class="rule-explain">Miệng bạn phát âm ra khi hỏi và trả lời giá cả hàng ngày:</p>
+                            <ul style="padding-left: 20px; line-height: 2; font-size: 1.05rem; color: var(--primary-dark); font-weight: 500;">
+                                <li class="playable" data-pronounce="块">块 [Kuài]: Đồng (Thay thế cho 元)</li>
+                                <li class="playable" data-pronounce="毛">毛 [Máo]: Hào (Thay thế cho 角)</li>
+                            </ul>
+                            <div class="tip-card" style="background-color: white; margin-top: 15px;">
+                                <p style="color: var(--text-dark)"><strong>Quy đổi:</strong> 1 块 (Tệ) = 10 毛 (Hào).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Luyện dịch giá tiền nhanh -->
+            <section class="slide" id="slide-7">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Thực hành đọc giá tiền giao tiếp</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body">
+                        <p class="lead-text">Hãy nhìn bảng giá tiền viết (bên trái) và luyện phản xạ nói (bên phải):</p>
+                        <div class="grid-3" style="gap: 15px;">
+                            <div class="custom-vocab-card playable" data-pronounce="八块五毛">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 8.5</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">8.5 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">八块五毛<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[bā kuài wǔ máo]</span></div>
+                            </div>
+                            <div class="custom-vocab-card playable" data-pronounce="十五块五毛">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 15.5</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">15.5 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">十五块五毛<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[shíwǔ kuài wǔ máo]</span></div>
+                            </div>
+                            <div class="custom-vocab-card playable" data-pronounce="一百二十块">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 120</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">120 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">一百二十块<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[yìbǎi èrshí kuài]</span></div>
+                            </div>
+                            <div class="custom-vocab-card playable" data-pronounce="两块">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 2.0</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">2.0 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">两块<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[liǎng kuài]</span></div>
+                            </div>
+                            <div class="custom-vocab-card playable" data-pronounce="五十块">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 50</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">50 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">五十块<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[wǔshí kuài]</span></div>
+                            </div>
+                            <div class="custom-vocab-card playable" data-pronounce="九块九">
+                                <div class="vocab-badge-zh" style="font-size: 1.3rem;">¥ 9.9</div>
+                                <div class="vocab-badge-pinyin" style="font-size: 0.95rem;">9.9 元</div>
+                                <div class="vocab-badge-vi" style="font-weight: bold; color: var(--primary-dark);">九块九<br><span style="font-weight: normal; font-size: 0.8rem; color: var(--text-light)">[jiǔ kuài jiǔ] (nói tắt)</span></div>
+                            </div>
+                        </div>
+                        <div class="tip-card" style="margin-top: 20px;">
+                            <p>💡 <strong>Cách nói tắt:</strong> Khi giá tiền có cả hàng đơn vị và Hào, người bản xứ thường bỏ chữ "毛" ở cuối. Ví dụ: "9.9块" đọc nhanh là <strong>九块九 [jiǔ kuài jiǔ]</strong> thay vì "九块九毛".</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Bài khóa tình huống giao tiếp thực tế -->
+            <section class="slide" id="slide-8">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Hội thoại thực tế (Số phòng & Hỏi giá)</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body dialog-container">
+                        <div class="dialog-block">
+                            <h3>Tình huống 1: Hỏi số phòng & tầng tại Quầy lễ tân khách sạn</h3>
+                            <div class="dialog-row">
+                                <span class="speaker">Lễ tân (A):</span>
+                                <div class="dialog-bubble">
+                                    <p class="zh">你好，这是你的房卡。你的房间是一五零二室，在十五楼。</p>
+                                    <p class="py">Nǐ hǎo, zhè shì nǐ de fángkǎ. Nǐ de fángjiān shì yī wǔ líng èr shì, zài shíwǔ lóu.</p>
+                                    <p class="vi">Xin chào, đây là thẻ phòng của anh. Phòng của anh là phòng 1502, ở tầng 15.</p>
+                                </div>
+                            </div>
+                            <div class="dialog-row">
+                                <span class="speaker">Anh Thảo (B):</span>
+                                <div class="dialog-bubble font-highlight">
+                                    <p class="zh">一五零二室，十五楼。好的，谢谢！</p>
+                                    <p class="py">Yī wǔ líng èr shì, shíwǔ lóu. Hǎo de, xièxie!</p>
+                                    <p class="vi">Phòng 1502, tầng 15. Dạ vâng, cảm ơn!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialog-block">
+                            <h3>Tình huống 2: Hỏi giá chai nước / đồ ăn nhẹ bên đường</h3>
+                            <div class="dialog-row">
+                                <span class="speaker">Anh Thảo (A):</span>
+                                <div class="dialog-bubble font-highlight">
+                                    <p class="zh">老板，这个多少钱？</p>
+                                    <p class="py">Lǎobǎn, zhège duōshao qián?</p>
+                                    <p class="vi">Ông chủ ơi, cái này bao nhiêu tiền?</p>
+                                </div>
+                            </div>
+                            <div class="dialog-row">
+                                <span class="speaker">Chủ quán (B):</span>
+                                <div class="dialog-bubble">
+                                    <p class="zh">八块五毛。</p>
+                                    <p class="py">Bā kuài wǔ máo.</p>
+                                    <p class="vi">Tám tệ rưỡi (8.5 tệ).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Thực hành tương tác phản xạ nhanh -->
+            <section class="slide" id="slide-9">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Tập phản xạ nhận diện số & Tiền tệ</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body grid-2">
+                        <div class="vocab-item interactive">
+                            <span class="zh-char">一五零二室</span>
+                            <span class="pinyin hidden">yī wǔ líng èr shì</span>
+                            <span class="meaning hidden">Phòng 1502</span>
+                        </div>
+                        <div class="vocab-item interactive">
+                            <span class="zh-char">二号线，C口</span>
+                            <span class="pinyin hidden">èr hào xiàn, C kǒu</span>
+                            <span class="meaning hidden">Tuyến số 2, Cổng ra C</span>
+                        </div>
+                        <div class="vocab-item interactive">
+                            <span class="zh-char">十五块五毛</span>
+                            <span class="pinyin hidden">shíwǔ kuài wǔ máo</span>
+                            <span class="meaning hidden">15.5 Tệ</span>
+                        </div>
+                        <div class="vocab-item interactive">
+                            <span class="zh-char">一百二十块</span>
+                            <span class="pinyin hidden">yìbǎi èrshí kuài</span>
+                            <span class="meaning hidden">120 Tệ</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Bài tập về nhà: Ghi âm phản xạ nói -->
+            <section class="slide" id="slide-10">
+                <div class="slide-content page-slide">
+                    <div class="slide-header">
+                        <h2>Bài tập về nhà: Ghi âm phản xạ nói</h2>
+                        <span class="slide-num"></span>
+                    </div>
+                    <div class="slide-body homework-container">
+                        <p class="lead-text">Học viên tự luyện tập phát âm theo mẫu bằng cách click vào các câu dưới đây, sau đó tự ghi âm gửi qua WeChat/Zalo cho giáo viên:</p>
+                        
+                        <div class="grid-2">
+                            <div class="exercise-card">
+                                <h3>Yêu cầu 1: Đọc tổ hợp số điện, số phòng ngẫu nhiên</h3>
+                                <ul class="drill-list">
+                                    <li class="playable" data-pronounce="八块五毛">8.5 块 -> <span class="hl">八块五毛</span></li>
+                                    <li class="playable" data-pronounce="一百二十块">120 块 -> <span class="hl">一百二十块</span></li>
+                                    <li class="playable" data-pronounce="十五楼，一五零二室">Phòng 1502 tầng 15 -> <span class="hl">十五楼，一五零二室</span></li>
+                                    <li class="playable" data-pronounce="三号线，C口">Tuyến số 3, lối ra C -> <span class="hl">三号线，C口</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="exercise-card">
+                                <h3>Yêu cầu 2: Ghi âm hội thoại phản xạ hai chiều</h3>
+                                <p class="drill-tip">Nghe kỹ phát âm mẫu và ghi âm cả đoạn hội thoại hỏi giá:</p>
+                                <div class="dialog-bubble font-highlight playable" data-pronounce="老板，这个多少钱？" style="width: 100%; box-sizing: border-box; margin-top: 15px; margin-bottom: 10px;">
+                                    <p class="zh">老板，这个多少钱？</p>
+                                    <p class="py">Lǎobǎn, zhège duōshao qián?</p>
+                                    <p class="vi">"Ông chủ ơi, cái này bao nhiêu tiền?"</p>
+                                </div>
+                                <div class="dialog-bubble playable" data-pronounce="十五块五毛。可以用微信吗？" style="width: 100%; box-sizing: border-box;">
+                                    <p class="zh">十五块五毛。可以用微信吗？</p>
+                                    <p class="py">Shíwǔ kuài wǔ máo. Kěyǐ yòng Wēixìn ma?</p>
+                                    <p class="vi">"15 tệ rưỡi. Có thể dùng WeChat thanh toán không?"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tip-card" style="margin-top: 20px;">
+                            <p>🎙️ <strong>Lưu ý ghi âm:</strong> Khi đếm số hoặc hỏi giá, cần phát âm dứt khoát các số có đuôi gió thanh 4 như "四" (sì) và thanh điệu "块" (kuài). Chúc anh Thảo luyện tập tốt!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Thanh điều hướng chân slide -->
+        <div class="presentation-controls">
+            <button class="nav-btn prev-btn" id="prev-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Trước
+            </button>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <button class="nav-btn next-btn" id="next-btn">
+                Sau
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
