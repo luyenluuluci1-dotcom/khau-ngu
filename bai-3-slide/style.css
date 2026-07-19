@@ -1,0 +1,720 @@
+/* --- Thiết kế hệ thống CSS cho Slide Tiếng Trung Bài 3 --- */
+
+/* Reset & Cài đặt chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #84B857; /* Xanh lá cây theo bìa giáo trình */
+    --primary-light: #f0f7ea;
+    --primary-dark: #5b873a;
+    --accent-color: #F8B26A;  /* Vàng nhạt từ chi tiết bìa sách */
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #0f172a; /* Nền tối sang trọng bao quanh slide */
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Vùng chứa slide tỉ lệ 16:9 chuẩn Laptop */
+.presentation-container {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9;
+    background-color: var(--bg-light);
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Khu vực hiển thị Slide */
+.slides-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mỗi slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Nội dung Slide */
+.slide-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --- Slide Bìa (Cover) --- */
+.cover-slide {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, var(--primary-light) 100%);
+    position: relative;
+}
+
+.cover-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-color: var(--primary-color);
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: var(--font-heading);
+}
+
+.main-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--primary-dark);
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    margin: 24px auto;
+    border-radius: 2px;
+}
+
+.author, .destination {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.author strong, .destination strong {
+    color: var(--primary-dark);
+}
+
+.cover-footer {
+    margin-top: 30px;
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.key {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+}
+
+/* --- Slide Trang nội dung --- */
+.slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.slide-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.slide-num {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 600;
+    background-color: var(--border-color);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.slide-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Custom Scrollbar */
+.slide-body::-webkit-scrollbar {
+    width: 6px;
+}
+.slide-body::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+}
+
+/* --- Bố cục dạng lưới (Grid) --- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.grid-2-large {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+/* --- Thẻ thông tin (Info cards) --- */
+.info-card, .target-card, .rule-card, .exercise-card, .scenario-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.lead-text {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.hl {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+/* --- Số đếm & Grid số --- */
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.number-item {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.number-item:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.num-arabic {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.num-zh {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 4px 0;
+}
+
+.num-py {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.num-vi {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* --- Từ vựng (Vocabulary Grid) --- */
+.vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.vocab-item {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease;
+    min-height: 120px;
+}
+
+.vocab-item.interactive {
+    cursor: pointer;
+}
+
+.vocab-item.interactive:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 16px -6px rgba(132, 184, 87, 0.2);
+    transform: translateY(-2px);
+}
+
+.zh-char {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.pinyin {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-top: 8px;
+}
+
+.meaning {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 6px;
+}
+
+/* Trạng thái ẩn từ vựng để hỏi */
+.hidden {
+    opacity: 0.1;
+    background-color: #e2e8f0;
+    color: transparent !important;
+    border-radius: 4px;
+    user-select: none;
+}
+
+/* --- Từ mới tùy biến mở rộng --- */
+.custom-vocab-card {
+    background-color: white;
+    border: 1px solid var(--primary-light);
+    border-left: 6px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 2fr;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.custom-vocab-card:hover {
+    transform: translateX(4px);
+    border-color: var(--primary-color);
+}
+
+.vocab-badge-zh {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.vocab-badge-pinyin {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.vocab-badge-vi {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* --- Bong bóng thoại (Dialogs) --- */
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dialog-block {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.dialog-block h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+
+.dialog-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.dialog-row:last-child {
+    margin-bottom: 0;
+}
+
+.speaker {
+    width: 85px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.dialog-bubble {
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    padding: 10px 16px;
+    flex: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.dialog-bubble:hover {
+    background-color: var(--primary-light);
+}
+
+.dialog-bubble.font-highlight {
+    background-color: var(--primary-light);
+    border-left: 3px solid var(--primary-color);
+}
+
+.dialog-bubble .zh {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.dialog-bubble .py {
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.dialog-bubble .vi {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* --- Thẻ Mẹo & Ghi âm --- */
+.tip-card {
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid rgba(132, 184, 87, 0.2);
+    margin-top: 15px;
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    line-height: 1.5;
+}
+
+.homework-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.playable {
+    cursor: pointer;
+    position: relative;
+}
+
+.playable::after {
+    content: "🔊";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.playable:hover::after {
+    opacity: 0.6;
+}
+
+.audio-playing {
+    animation: pulse 0.15s ease-in-out alternate 2;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(0.98); }
+}
+
+/* --- Luyện tập --- */
+.exercise-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+}
+
+.drill-list {
+    list-style: none;
+}
+
+.drill-list li {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border-bottom: 1px solid var(--bg-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.drill-list li:hover {
+    background-color: var(--primary-light);
+}
+
+.drill-list li:last-child {
+    border-bottom: none;
+}
+
+.drill-list li strong {
+    color: var(--text-dark);
+}
+
+.drill-list li span.hl {
+    background-color: var(--primary-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Formula & Rules */
+.formula-box {
+    background-color: var(--primary-light);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.formula {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.rule-explain {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.example-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-light);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.ex-old {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.arrow {
+    margin: 0 15px;
+    color: var(--text-light);
+    font-weight: bold;
+}
+
+.ex-new {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* --- Controls Footer --- */
+.presentation-controls {
+    height: 60px;
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary-color);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.progress-bar-container {
+    flex: 1;
+    height: 6px;
+    background-color: var(--bg-light);
+    border-radius: 3px;
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.w-full {
+    width: 100%;
+}
+.box-border {
+    box-sizing: border-box;
+}
+.scenario-grid {
+    gap: 20px;
+}
+.scenario-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+.scenario-card ul {
+    padding-left: 20px;
+}
+.scenario-card li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
